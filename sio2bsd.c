@@ -251,6 +251,8 @@ sio2bsd_usage(void)
 	printf("-c x      - set POKEY nonlinearity constant to x (%f is being used by default)\n", POKEY_CONST);
 # endif
 
+	printf("\n-h        - help\n");
+	printf("-?        - help\n");
 }
 
 static void
@@ -4110,10 +4112,11 @@ main(int argc, char **argv)
 	signal(SIGTHR, sig);
 # endif
 
+	// switch to getopt long
 # ifdef ULTRA
-#   define OPTSTR "b:i:q:c:d:p:s:f:tmlu?8"
+#   define OPTSTR "b:i:q:c:d:p:s:f:tmluh?8"
 # else
-#  define OPTSTR "d:p:s:f:tmlu?8"
+#  define OPTSTR "d:p:s:f:tmluh?8"
 # endif
 
 	while ((ch = getopt(argc, argv, OPTSTR)) != -1)
@@ -4210,6 +4213,7 @@ main(int argc, char **argv)
 				break;
 			}
 		        
+			case 'h':
 			case '?':
 			default:
 			{
