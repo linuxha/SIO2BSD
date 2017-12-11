@@ -133,8 +133,6 @@
 # include <linux/serial.h>
 # endif
 
-# define SIOTRACE
-
 # include "sio2bsd.h"
 
 # define BASIC_DELAY 2000
