@@ -3,6 +3,12 @@
  * (c) 2005-11 KMK <drac030@krap.pl>
  *
  */
+#ifndef SIO2BSD_H
+
+# define VERSION "1"
+# define REVISION "19"
+
+# define SEMANTIC_VERSION "1.1.20"
 
 # if defined (NOT_FBSD)
 #  include <endian.h>
@@ -125,4 +131,5 @@ typedef struct
 static void sig (int) __attribute__ ((__noreturn__));
 # endif
 
+#endif /* SIO2BSD_H */
 /* EOF */
