@@ -1,9 +1,12 @@
-# define VERSION "1"
-# define REVISION "19"
-
 /* SIO2BSD, (c) 2005-2012 KMK <drac030@krap.pl>
+ *          (c) 2017 
+ *          (c) 2017 Neil Cherry <ncherry@linuxha.com>
  *
  * CHANGES:
+ *
+ * rev. 1.1.20:
+ * - switched to semantic versioning and moved versioning into the header
+ *   file.
  *
  * rev. 19:
  * - added an option for additional delay to support communication via 
@@ -190,7 +193,8 @@ static uid_t our_uid = 0;
 static void
 sio2bsd_itsme(void)
 {
-	printf("\nSIO2BSD " VERSION "." REVISION ", (c) " DYEAR " by KMK/DLT\n");
+    //printf("\nSIO2BSD " VERSION "." REVISION ", (c) " DYEAR " by KMK/DLT\n");
+	printf("\nSIO2BSD " SEMANTIC_VERSION ", (c) " DYEAR " by KMK/DLT/NJC\n");
 }
 
 static void
