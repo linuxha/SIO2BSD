@@ -5,10 +5,7 @@
  */
 #ifndef SIO2BSD_H
 
-# define VERSION "1"
-# define REVISION "19"
-
-# define SEMANTIC_VERSION "1.1.20"
+#include "version.h"
 
 # if defined (NOT_FBSD)
 #  include <endian.h>
