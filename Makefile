@@ -45,13 +45,13 @@ SRC= sio2bsd.c
 OBJ= sio2bsd.o
 TARGET= sio2bsd
 DISTDATE=`date +%F`
-DISTFILES= COPYING INSTALL README Makefile mkatr sio2bsd.c sio2bsd.h 
+DISTFILES= COPYING INSTALL README Makefile mkatr sio2bsd.c sio2bsd.h version.h
 
 .PHONY: clean strip install dist all
 
 all: $(TARGET)
 
-$(OBJ): sio2bsd.h
+$(OBJ): sio2bsd.h version.h
 
 $(TARGET): $(OBJ)
 	$(CC) $(CFLAGS) $(OBJ) -o $@ $(LDLIBS)
